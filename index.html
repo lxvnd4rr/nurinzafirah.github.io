@@ -1,4 +1,24 @@
-```
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learnify e-Portfolio - Nurin Zafirah</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root{
+  --bg:#f7f1e3;
+  --card:#fffaf3;
+  --primary:#8b6f47;
+  --secondary:#a68a64;
+  --text:#2f2a25;
+  --muted:#6b625a;
+  --accent:#c7a27a;
+  --shadow:0 10px 30px rgba(0,0,0,0.08);
+}
     * {
         box-sizing: border-box;
         margin: 0;
@@ -12,296 +32,215 @@
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background-color: var(--bg-color);
-        color: var(--text-main);
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow-x: hidden;
     }
 
-    h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
-        color: var(--primary-dark);
-        font-weight: 700;
-    }
-
-    a {
-        color: var(--primary-color);
-        text-decoration: none;
-        transition: var(--transition);
-    }
-
-    a:hover {
-        color: var(--accent-color);
-    }
-
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-    }
-
-    /* Sticky Navigation */
+    /* Top Navigation */
     header {
         position: sticky;
         top: 0;
-        z-index: 1000;
-        background-color: rgba(252, 250, 247, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border-color);
-        transition: var(--transition);
+        z-index: 1000;
     }
 
     nav {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 70px;
+        padding: 1rem 2rem;
     }
 
-    .nav-logo {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.3rem;
+    .logo {
+        font-family: 'Comfortaa', cursive;
         font-weight: 700;
+        font-size: 1.3rem;
         color: var(--primary-dark);
+        text-decoration: none;
     }
 
     .nav-links {
         display: flex;
-        gap: 28px;
         list-style: none;
+        gap: 2rem;
     }
 
     .nav-links a {
-        font-size: 0.95rem;
+        text-decoration: none;
+        color: var(--text-color);
         font-weight: 500;
-        color: var(--text-muted);
-        position: relative;
-        padding: 4px 0;
-    }
-
-    .nav-links a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--accent-color);
-        transition: var(--transition);
+        font-size: 0.95rem;
+        transition: color 0.3s;
     }
 
     .nav-links a:hover {
-        color: var(--primary-dark);
-    }
-
-    .nav-links a:hover::after {
-        width: 100%;
-    }
-
-    /* Hero / Profile Section */
-    .profile-hero {
-        padding: 80px 0 60px 0;
-        text-align: center;
-        background: linear-gradient(180deg, var(--surface-muted) 0%, var(--bg-color) 100%);
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .profile-card {
-        background-color: var(--surface-color);
-        max-width: 750px;
-        margin: 0 auto;
-        padding: 40px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-md);
-        border: 1px solid var(--border-color);
-    }
-
-    .profile-avatar {
-        width: 90px;
-        height: 90px;
-        background-color: var(--surface-muted);
-        border-radius: 50%;
-        margin: 0 auto 20px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
         color: var(--primary-color);
-        border: 2px solid var(--primary-light);
     }
 
-    .profile-card h1 {
-        font-size: 2.2rem;
-        margin-bottom: 6px;
-        letter-spacing: -0.5px;
+    /* Main Container */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
     }
 
-    .programme-tag {
-        display: inline-block;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 600;
-        background-color: var(--surface-muted);
-        color: var(--primary-dark);
-        padding: 4px 16px;
-        border-radius: 50px;
-        margin-bottom: 24px;
-    }
-
-    .meta-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        padding-top: 20px;
-        border-top: 1px dashed var(--border-color);
-        text-align: left;
-    }
-
-    .meta-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .meta-label {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        color: var(--text-muted);
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-    }
-
-    .meta-value {
-        font-weight: 600;
-        color: var(--primary-dark);
-        font-size: 0.95rem;
-    }
-
-    /* General Section Layout */
     section {
-        padding: 90px 0;
-        border-bottom: 1px solid var(--border-color);
+        padding: 5rem 0 2rem 0;
     }
 
     .section-title {
+        font-family: 'Comfortaa', cursive;
         font-size: 2.2rem;
+        color: var(--primary-dark);
+        margin-bottom: 2.5rem;
         text-align: center;
-        margin-bottom: 16px;
         position: relative;
     }
 
-    .section-subtitle {
-        text-align: center;
-        color: var(--text-muted);
-        max-width: 600px;
-        margin: 0 auto 50px auto;
-        font-size: 1.05rem;
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+        margin: 0.5rem auto 0 auto;
+        border-radius: 2px;
     }
 
-    /* Home / SDG Section */
-    .home-grid {
+    /* Hero / Home Section */
+    .hero-container {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 40px;
-        align-items: start;
-    }
-
-    .intro-box {
-        background-color: var(--surface-color);
-        padding: 36px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        background-color: var(--card-bg);
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(140, 120, 99, 0.05);
         border: 1px solid var(--border-color);
     }
 
-    .intro-box p {
-        font-size: 1.05rem;
-        color: var(--text-main);
+    .profile-card {
+        background-color: var(--bg-color);
+        border-radius: 18px;
+        padding: 2.5rem;
+        border: 1px solid var(--border-color);
     }
 
-    .sdg-box {
-        background-color: #f4f7f4; /* Subtle green-beige tint for SDG 4 vibe */
-        padding: 36px;
-        border-radius: var(--radius-lg);
-        border: 1px solid #e1ede1;
-        box-shadow: var(--shadow-sm);
+    .profile-meta {
+        margin-top: 1.5rem;
+    }
+
+    .profile-meta div {
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .profile-meta span {
+        font-weight: 600;
+        color: var(--primary-dark);
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    .intro-title {
+        font-family: 'Comfortaa', cursive;
+        color: var(--primary-dark);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .intro-text {
+        color: var(--text-light);
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
     }
 
     .sdg-badge {
-        display: inline-flex;
-        align-items: center;
-        background-color: #c51b2d;
+        display: inline-block;
+        background-color: #e76f51;
         color: white;
-        padding: 6px 14px;
-        font-weight: 700;
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-weight: 600;
         font-size: 0.85rem;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
     }
 
-    .sdg-box h3 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 1.25rem;
-        color: #1a331e;
-        margin-bottom: 14px;
-        font-weight: 600;
+    .sdg-box {
+        background-color: #fffaf5;
+        border-left: 4px solid #e76f51;
+        padding: 1.5rem;
+        border-radius: 0 12px 12px 0;
+        margin-top: 1.5rem;
+    }
+
+    .sdg-box h4 {
+        color: #e76f51;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
     }
 
     .sdg-list {
-        list-style: none;
-        margin-top: 16px;
+        list-style-type: none;
+        margin-top: 0.8rem;
     }
 
     .sdg-list li {
         position: relative;
-        padding-left: 24px;
-        margin-bottom: 12px;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
         font-size: 0.95rem;
-        color: #2c3e2f;
+        color: var(--text-light);
     }
 
     .sdg-list li::before {
-        content: "✓";
+        content: "•";
+        color: #e76f51;
+        font-weight: bold;
+        font-size: 1.2rem;
         position: absolute;
         left: 0;
-        color: #c51b2d;
-        font-weight: bold;
+        top: -2px;
     }
 
-    /* Labs & Projects Layout Framework */
+    /* Grid Layouts for Cards */
     .cards-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
     }
 
-    .card {
-        background-color: var(--surface-color);
-        border-radius: var(--radius-lg);
+    .portfolio-card {
+        background-color: var(--card-bg);
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: var(--shadow-sm);
         border: 1px solid var(--border-color);
+        box-shadow: 0 8px 24px rgba(140, 120, 99, 0.03);
         display: flex;
         flex-direction: column;
-        transition: var(--transition);
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-md);
+    .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(140, 120, 99, 0.08);
     }
 
-    .video-container {
+    .video-wrapper {
         position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
         background-color: #000;
     }
 
-    .video-container iframe {
+    .video-wrapper iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -310,476 +249,395 @@
         border: 0;
     }
 
-    .card-body {
-        padding: 28px;
+    .card-content {
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
 
-    .card-tag {
-        font-size: 0.75rem;
+    .card-title {
+        font-family: 'Comfortaa', cursive;
+        font-size: 1.3rem;
+        color: var(--primary-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: 700;
-        color: var(--accent-color);
-        margin-bottom: 6px;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 1rem;
     }
 
-    .card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-        color: var(--primary-dark);
-    }
-
-    .card-description {
+    .card-desc {
         font-size: 0.95rem;
-        color: var(--text-muted);
-        margin-bottom: 20px;
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
     }
 
-    .reflection-block {
-        background-color: var(--surface-muted);
-        padding: 18px;
-        border-radius: var(--radius-md);
-        margin-top: auto;
-        border-left: 3px solid var(--primary-light);
-    }
-
-    .reflection-title {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-weight: 700;
-        color: var(--primary-dark);
-        margin-bottom: 6px;
-    }
-
-    .reflection-text {
+    .card-reflection {
+        background-color: var(--bg-color);
+        padding: 1.2rem;
+        border-radius: 12px;
         font-size: 0.9rem;
+        border-left: 3px solid var(--accent-color);
+        color: var(--text-color);
         font-style: italic;
-        color: var(--text-main);
+        margin-top: auto;
     }
 
-    /* Project Specific Elements */
-    .project-meta {
-        margin-bottom: 14px;
-        font-size: 0.9rem;
-    }
-
-    .project-meta strong {
-        color: var(--primary-dark);
+    .card-actions {
+        margin-top: 1.5rem;
     }
 
     .btn-github {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        background-color: var(--primary-dark);
-        color: var(--bg-color);
-        padding: 10px 20px;
-        border-radius: var(--radius-md);
+        gap: 0.5rem;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 500;
         font-size: 0.9rem;
-        font-weight: 600;
-        margin-bottom: 20px;
-        transition: var(--transition);
-        border: none;
-        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
     }
 
     .btn-github:hover {
-        background-color: var(--accent-color);
-        color: var(--primary-dark);
+        background-color: var(--primary-dark);
     }
 
-    /* Reflection & Journey Section */
-    .journey-card {
-        background-color: var(--surface-color);
-        padding: 40px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
+    /* Reflection Page Section */
+    .reflection-block {
+        background-color: var(--card-bg);
+        border-radius: 24px;
+        padding: 3rem;
         border: 1px solid var(--border-color);
-        max-width: 900px;
-        margin: 0 auto;
+        box-shadow: 0 10px 30px rgba(140, 120, 99, 0.03);
     }
 
-    .journey-text p {
-        margin-bottom: 20px;
+    .reflection-text p {
+        margin-bottom: 1.5rem;
         font-size: 1.05rem;
-    }
-
-    .journey-text p:last-child {
-        margin-bottom: 0;
+        color: var(--text-color);
+        text-align: justify;
     }
 
     /* Skills Section */
     .skills-container {
-        max-width: 850px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .skills-flex {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 1rem;
         justify-content: center;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
-    .skill-tag {
-        background-color: var(--surface-color);
-        color: var(--text-main);
-        padding: 8px 18px;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        box-shadow: var(--shadow-sm);
+    .skill-badge {
+        background-color: var(--card-bg);
         border: 1px solid var(--border-color);
-        transition: var(--transition);
+        color: var(--text-color);
+        padding: 0.6rem 1.2rem;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        box-shadow: 0 4px 10px rgba(140, 120, 99, 0.02);
+        transition: all 0.3s;
     }
 
-    .skill-tag:hover {
-        background-color: var(--primary-light);
-        color: white;
-        border-color: var(--primary-light);
+    .skill-badge:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-dark);
         transform: translateY(-2px);
     }
 
     /* Resources Section */
-    .resources-grid {
+    .resources-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-        align-items: start;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
     }
 
-    .resources-box {
-        background-color: var(--surface-color);
-        padding: 32px;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-sm);
+    .resource-box {
+        background-color: var(--card-bg);
+        border-radius: 20px;
+        padding: 2rem;
         border: 1px solid var(--border-color);
-        height: 100%;
+        box-shadow: 0 8px 24px rgba(140, 120, 99, 0.03);
     }
 
-    .resources-box h3 {
-        font-size: 1.3rem;
-        margin-bottom: 18px;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 10px;
-    }
-
-    .resources-list {
-        list-style: none;
-    }
-
-    .resources-list > li {
-        margin-bottom: 16px;
-        font-size: 0.95rem;
-    }
-
-    .resources-list strong {
+    .resource-box h3 {
+        font-family: 'Comfortaa', cursive;
         color: var(--primary-dark);
+        margin-bottom: 1.2rem;
+        font-size: 1.25rem;
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 0.5rem;
     }
 
-    .sub-list {
-        list-style: none;
-        padding-left: 16px;
-        margin-top: 6px;
+    .resource-box ul {
+        list-style-type: none;
     }
 
-    .sub-list li {
+    .resource-box ul li {
         position: relative;
-        padding-left: 14px;
-        margin-bottom: 6px;
-        font-size: 0.9rem;
-        color: var(--text-muted);
+        padding-left: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+        color: var(--text-light);
     }
 
-    .sub-list li::before {
-        content: "•";
+    .resource-box ul li::before {
+        content: "✦";
+        color: var(--primary-color);
         position: absolute;
         left: 0;
-        color: var(--accent-color);
-    }
-
-    .ai-box {
-        grid-column: 1 / -1;
-        background-color: var(--surface-muted);
-        padding: 28px;
-        border-radius: var(--radius-lg);
-        border: 1px dashed var(--primary-light);
-        font-size: 0.95rem;
-    }
-
-    .ai-box h4 {
-        color: var(--primary-dark);
-        margin-bottom: 8px;
-        font-weight: 600;
     }
 
     /* Footer */
     footer {
         background-color: var(--primary-dark);
-        color: var(--surface-muted);
-        padding: 40px 0;
+        color: #f5ede6;
         text-align: center;
-        font-size: 0.9rem;
+        padding: 2.5rem 2rem;
+        margin-top: 5rem;
+        border-top: 1px solid var(--primary-dark);
+        font-size: 0.95rem;
     }
 
     footer p {
-        margin-bottom: 6px;
+        margin-bottom: 0.4rem;
     }
 
     footer .meta-info {
-        font-size: 0.8rem;
-        opacity: 0.7;
-        letter-spacing: 0.5px;
+        color: var(--accent-color);
+        font-size: 0.85rem;
     }
 
     /* Responsive Breakpoints */
     @media (max-width: 992px) {
-        .home-grid, .resources-grid {
+        .hero-container {
             grid-template-columns: 1fr;
-        }
-        .cards-grid {
-            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem;
         }
     }
 
     @media (max-width: 768px) {
         nav {
             flex-direction: column;
-            height: auto;
-            padding: 16px 0;
-            gap: 12px;
+            gap: 1rem;
+            padding: 1rem;
         }
         .nav-links {
-            gap: 16px;
+            gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .profile-card {
-            padding: 24px;
+        main {
+            padding: 1rem;
         }
-        .meta-grid {
+        .section-title {
+            font-size: 1.8rem;
+        }
+        .cards-grid {
             grid-template-columns: 1fr;
-            gap: 12px;
         }
-        section {
-            padding: 60px 0;
+        .reflection-block {
+            padding: 1.5rem;
         }
     }
 </style>
-
-```
-
-```
+   
 <header>
-    <div class="container">
-        <nav>
-            <div class="nav-logo">NZ . Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#labs">Labs</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#reflection">Reflection</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav>
+        <a href="#home" class="logo">nz.portfolio</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
 </header>
 
-<div class="profile-hero">
-    <div class="container">
-        <div class="profile-card">
-            <div class="profile-avatar">NZ</div>
-            <h1>NURIN ZAFIRAH BINTI MOHD NAZRI</h1>
-            <div class="programme-tag">Information Technology</div>
-            
-            <div class="meta-grid">
-                <div class="meta-item">
-                    <span class="meta-label">Matric No.</span>
-                    <span class="meta-value">A210658</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Instructor</span>
-                    <span class="meta-value">Dr. Rimaniza Binti Zainal Abidin</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<main class="container">
+<main>
 
     <section id="home">
-        <h2 class="section-title">Welcome to My e-Portfolio</h2>
-        <p class="section-subtitle">An elegant display of mobile development milestones, interactive design explorations, and sustainable education alignment.</p>
-        
-        <div class="home-grid">
-            <div class="intro-box">
-                <p>Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. The application allows users to create, organize, study, and share flashcard sets for various subjects, making revision more structured and engaging. Learnify also supports user authentication, cloud-based data synchronization, and local data storage to ensure a seamless learning experience. By providing an accessible and interactive platform for self-directed learning, Learnify aims to improve students' study habits and academic performance.</p>
+        <div class="hero-container">
+            <div class="profile-card">
+                <div class="profile-meta">
+                    <div class="meta-label">Student Name</div>
+                    <span>NURIN ZAFIRAH BINTI MOHD NAZRI</span>
+                </div>
+                <div class="profile-meta">
+                    <div class="meta-label">Matric No.</div>
+                    <span>A210658</span>
+                </div>
+                <div class="profile-meta">
+                    <div class="meta-label">Programme</div>
+                    <span>INFORMATION TECHNOLOGY</span>
+                </div>
+                <div class="profile-meta">
+                    <div class="meta-label">Instructor</div>
+                    <span>DR. RIMANIZA BINTI ZAINAL ABIDIN</span>
+                </div>
             </div>
-            
-            <div class="sdg-box">
-                <div class="sdg-badge">SDG 4</div>
-                <h3>Quality Education</h3>
-                <p>Learnify is cleanly aligned with United Nations Sustainable Development Goal (SDG) 4: Quality Education, which aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. The application supports this goal by:</p>
-                <ul class="sdg-list">
-                    <li>Providing students with easy access to educational resources anytime and anywhere.</li>
-                    <li>Encouraging active learning through flashcard-based revision techniques.</li>
-                    <li>Helping learners improve knowledge retention and study efficiency.</li>
-                    <li>Supporting self-paced and continuous learning beyond the classroom.</li>
-                    <li>Enabling the sharing of learning materials among students, fostering collaborative learning.</li>
-                </ul>
+            <div>
+                <h2 class="intro-title">Learnify</h2>
+                <p class="intro-text">Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. The application allows users to create, organize, study, and share flashcard sets for various subjects, making revision more structured and engaging. Learnify also supports user authentication, cloud-based data synchronization, and local data storage to ensure a seamless learning experience. By providing an accessible and interactive platform for self-directed learning, Learnify aims to improve students' study habits and academic performance.</p>
+                
+                <div class="sdg-badge">SDG 4: Quality Education</div>
+                <div class="sdg-box">
+                    <h4>United Nations Sustainable Development Goal (SDG) 4 Alignment</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-color);">Learnify is aligned with United Nations Sustainable Development Goal (SDG) 4: Quality Education, which aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. The application supports this goal by:</p>
+                    <ul class="sdg-list">
+                        <li>Providing students with easy access to educational resources anytime and anywhere.</li>
+                        <li>Encouraging active learning through flashcard-based revision techniques.</li>
+                        <li>Helping learners improve knowledge retention and study efficiency.</li>
+                        <li>Supporting self-paced and continuous learning beyond the classroom.</li>
+                        <li>Enabling the sharing of learning materials among students, fostering collaborative learning.</li>
+                    </ul>
+                    <p style="font-size: 0.95rem; color: var(--text-color); margin-top: 0.8rem;">Through these features, Learnify contributes to enhancing the quality of education by making learning more accessible, organized, and effective for students.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="labs">
-        <h2 class="section-title">Laboratory Exercises</h2>
-        <p class="section-subtitle">Step-by-step technical foundations built using Jetpack Compose, exploring modern Android UI architecture.</p>
-        
+        <h2 class="section-title">Development Labs</h2>
         <div class="cards-grid">
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/ZFo-xeYRXy4](https://www.youtube.com/embed/ZFo-xeYRXy4)" title="Lab 1 Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/ZFo-xeYRXy4](https://www.youtube.com/embed/ZFo-xeYRXy4)" title="Lab 1 UI Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Lab 1</span>
-                    <h3>UI Fundamentals</h3>
-                    <p class="card-description">Exploration of foundational layout configurations in Jetpack Compose, setting structural foundations with essential layout components.</p>
-                    <div class="reflection-block">
-                        <div class="reflection-title">Reflection</div>
-                        <p class="reflection-text">Lab 1 helped me understand the fundamental layout components in Jetpack Compose, especially how Column, Row, and Box are used to arrange UI elements. At first, recreating an existing app layout was challenging, but it improved my understanding of screen structure and UI design. This lab provided a strong foundation for developing more complex mobile applications in later labs and projects.</p>
+                <div class="card-content">
+                    <div class="card-subtitle">Lab 1</div>
+                    <h3 class="card-title">User Interface (UI) Development</h3>
+                    <p class="card-desc">Exploring fundamental structural components in Jetpack Compose to arrange essential UI layouts elements accurately.</p>
+                    <div class="card-reflection">
+                        Lab 1 helped me understand the fundamental layout components in Jetpack Compose, especially how Column, Row, and Box are used to arrange UI elements. At first, recreating an existing app layout was challenging, but it improved my understanding of screen structure and UI design. This lab provided a strong foundation for developing more complex mobile applications in later labs and projects.
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/bmdDFV5CvEc](https://www.youtube.com/embed/bmdDFV5CvEc)" title="Lab 2 Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/bmdDFV5CvEc](https://www.youtube.com/embed/bmdDFV5CvEc)" title="Lab 2 Interaction Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Lab 2</span>
-                    <h3>User Interaction</h3>
-                    <p class="card-description">Deep dive into building dynamic interfaces and orchestrating responses based on explicit runtime user events.</p>
-                    <div class="reflection-block">
-                        <div class="reflection-title">Reflection</div>
-                        <p class="reflection-text">Lab 2 helped me understand how state management works in Jetpack Compose using remember and mutableStateOf. At first, it was challenging to understand how user input could automatically update the UI, but through practice I learned how recomposition makes applications interactive and responsive. This lab improved my understanding of creating dynamic user interfaces and prepared me for developing more advanced features in future projects.</p>
+                <div class="card-content">
+                    <div class="card-subtitle">Lab 2</div>
+                    <h3 class="card-title">User Interaction & State Management</h3>
+                    <p class="card-desc">Implementing reactive interface features that capture user inputs dynamically using state states.</p>
+                    <div class="card-reflection">
+                        Lab 2 helped me understand how state management works in Jetpack Compose using remember and mutableStateOf. At first, it was challenging to understand how user input could automatically update the UI, but through practice I learned how recomposition makes applications interactive and responsive. This lab improved my understanding of creating dynamic user interfaces and prepared me for developing more advanced features in future projects.
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/Vwz6M_BbEUg](https://www.youtube.com/embed/Vwz6M_BbEUg)" title="Lab 3 Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/Vwz6M_BbEUg](https://www.youtube.com/embed/Vwz6M_BbEUg)" title="Lab 3 Material Design Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Lab 3</span>
-                    <h3>Material Design 3</h3>
-                    <p class="card-description">Polishing application aesthetics according to cohesive system design rules, colors, typography, and clean layout patterns.</p>
-                    <div class="reflection-block">
-                        <div class="reflection-title">Reflection</div>
-                        <p class="reflection-text">lab 3 helped me understand how Material Design improves the overall appearance and user experience of a mobile application. I learned how to apply custom themes, colors, typography, and cards to create a more professional interface. The expandable card animation was slightly challenging at first, but it helped me understand how animations can make an app more interactive and engaging.</p>
+                <div class="card-content">
+                    <div class="card-subtitle">Lab 3</div>
+                    <h3 class="card-title">Material Design 3 Integration</h3>
+                    <p class="card-desc">Applying custom themes, sophisticated typographies, cards and complex layout transitions for rich aesthetics.</p>
+                    <div class="card-reflection">
+                        lab 3 helped me understand how Material Design improves the overall appearance and user experience of a mobile application. I learned how to apply custom themes, colors, typography, and cards to create a more professional interface. The expandable card animation was slightly challenging at first, but it helped me understand how animations can make an app more interactive and engaging.
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/t_tWFHGeUf8](https://www.youtube.com/embed/t_tWFHGeUf8)" title="Lab 4 Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/t_tWFHGeUf8](https://www.youtube.com/embed/t_tWFHGeUf8)" title="Lab 4 Navigation Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Lab 4</span>
-                    <h3>Navigation & ViewModels</h3>
-                    <p class="card-description">Structuring complex application flows via structured screen routing mechanisms and decoupled architectural view data pipelines.</p>
-                    <div class="reflection-block">
-                        <div class="reflection-title">Reflection</div>
-                        <p class="reflection-text">lab 4 helped me understand how to implement Jetpack Compose Navigation to connect multiple screens in Learnify, making the app flow more structured and realistic like a real application. I also learned how ViewModel helps to store and manage shared data across screens, so user input and flashcard information remain consistent even when navigating between pages. Overall, this lab improved my understanding of multi-screen architecture and state management in Android development.</p>
+                <div class="card-content">
+                    <div class="card-subtitle">Lab 4</div>
+                    <h3 class="card-title">Multi-Screen Navigation</h3>
+                    <p class="card-desc">Constructing end-to-end user navigation flows using view-models to accurately retain context data states across screens.</p>
+                    <div class="card-reflection">
+                        lab 4 helped me understand how to implement Jetpack Compose Navigation to connect multiple screens in Learnify, making the app flow more structured and realistic like a real application. I also learned how ViewModel helps to store and manage shared data across screens, so user input and flashcard information remain consistent even when navigating between pages. Overall, this lab improved my understanding of multi-screen architecture and state management in Android development.
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/X50wHpeEgKc](https://www.youtube.com/embed/X50wHpeEgKc)" title="Lab 5 Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/X50wHpeEgKc](https://www.youtube.com/embed/X50wHpeEgKc)" title="Lab 5 Room Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Lab 5</span>
-                    <h3>Local Persistence via Room</h3>
-                    <p class="card-description">Integrating persistent data layers using structured SQLite abstractions within standard Android architectures.</p>
-                    <div class="reflection-block">
-                        <div class="reflection-title">Reflection</div>
-                        <p class="reflection-text">Lab 5 helped me understand how to implement Room Database as a persistent storage solution in Android, allowing data to remain saved even after the app is closed. I also understood how the MVVM architecture works in a complete flow using Entity, DAO, Repository, and ViewModel to manage and separate data logic properly. Overall, this lab improved my understanding of real-world mobile app architecture and how data persistence is handled in professional Android applications.</p>
+                <div class="card-content">
+                    <div class="card-subtitle">Lab 5</div>
+                    <h3 class="card-title">Room Database Storage Flow</h3>
+                    <p class="card-desc">Setting architectural data persistence structures leveraging organized DAO routines and local application repositories.</p>
+                    <div class="card-reflection">
+                        Lab 5 helped me understand how to implement Room Database as a persistent storage solution in Android, allowing data to remain saved even after the app is closed. I also understood how the MVVM architecture works in a complete flow using Entity, DAO, Repository, and ViewModel to manage and separate data logic properly. Overall, this lab improved my understanding of real-world mobile app architecture and how data persistence is handled in professional Android applications.
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-title">Core Projects</h2>
-        <p class="section-subtitle">Comprehensive capstones synthesizing architectural paradigms, external data pipelines, and hardware hardware access.</p>
-        
+        <h2 class="section-title">Main Projects</h2>
         <div class="cards-grid">
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/t_tWFHGeUf8](https://www.youtube.com/embed/t_tWFHGeUf8)" title="Project 1 Video Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/t_tWFHGeUf8](https://www.youtube.com/embed/t_tWFHGeUf8)" title="Project 1 VSR Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Project Phase 1</span>
-                    <h3>Learnify (Architecture & Core Features)</h3>
+                <div class="card-content">
+                    <div class="card-subtitle">Project 1</div>
+                    <h3 class="card-title">Learnify (Lab 4 Core Ecosystem)</h3>
+                    <p class="card-desc"><strong>Problem Statement:</strong> Students often face difficulties in managing their study materials effectively. Notes are scattered across different platforms, making it hard to organize and review information efficiently. In addition, many students rely on traditional revision methods that are less engaging and do not support active recall, resulting in lower knowledge retention. Furthermore, students may struggle to access structured learning resources that can help them revise consistently and track their learning progress. These challenges can negatively affect learning effectiveness and academic performance.</p>
                     
-                    <div class="project-meta">
-                        <p><strong>Problem Statement:</strong> Students often face difficulties in managing their study materials effectively. Notes are scattered across different platforms, making it hard to organize and review information efficiently. In addition, many students rely on traditional revision methods that are less engaging and do not support active recall, resulting in lower knowledge retention. Furthermore, students may struggle to access structured learning resources that can help them revise consistently and track their learning progress. These challenges can negatively affect learning effectiveness and academic performance.</p>
+                    <div class="card-reflection" style="margin-bottom: 1.5rem;">
+                        <strong>Lessons Learned:</strong> Through the development of Learnify, I learned the importance of understanding user needs before designing an application. I gained practical experience in mobile app development, user interface design, and database integration. The project also improved my problem-solving skills, especially in handling data management and application functionality. Additionally, I learned how technology can be used to support SDG 4 (Quality Education) by providing students with a more effective and accessible learning platform. Overall, this project enhanced both my technical and project management skills.
                     </div>
-
-                    <a href="[https://github.com/lxvnd4rr/A210658_NurinZafirah_DrRimaniza_Project1](https://github.com/lxvnd4rr/A210658_NurinZafirah_DrRimaniza_Project1)" target="_blank" class="btn-github">
-                        View on GitHub
-                    </a>
-
-                    <div class="reflection-block">
-                        <div class="reflection-title">Lessons Learned</div>
-                        <p class="reflection-text">Through the development of Learnify, I learned the importance of understanding user needs before designing an application. I gained practical experience in mobile app development, user interface design, and database integration. The project also improved my problem-solving skills, especially in handling data management and application functionality. Additionally, I learned how technology can be used to support SDG 4 (Quality Education) by providing students with a more effective and accessible learning platform. Overall, this project enhanced both my technical and project management skills.</p>
+                    
+                    <div class="card-actions">
+                        <a href="[https://github.com/lxvnd4rr/A210658_NurinZafirah_DrRimaniza_Project1](https://github.com/lxvnd4rr/A210658_NurinZafirah_DrRimaniza_Project1)" target="_blank" class="btn-github">View on GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="[https://www.youtube.com/embed/OhRSM3fLiZM](https://www.youtube.com/embed/OhRSM3fLiZM)" title="Project 2 Video Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="portfolio-card">
+                <div class="video-wrapper">
+                    <iframe src="[https://www.youtube.com/embed/OhRSM3fLiZM](https://www.youtube.com/embed/OhRSM3fLiZM)" title="Project 2 VSR Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-body">
-                    <span class="card-tag">Project Phase 2</span>
-                    <h3>Learnify (Cloud, APIs & Sensors Integration)</h3>
+                <div class="card-content">
+                    <div class="card-subtitle">Project 2</div>
+                    <h3 class="card-title">Learnify Advanced Platform</h3>
+                    <p class="card-desc"><strong>Problem Statement:</strong> Many students face difficulties in organizing study materials, revising important concepts effectively, and accessing learning resources in a structured manner. Traditional note-taking methods can be difficult to manage and often lack interactive features that support active learning. To address this issue and support SDG 4: Quality Education, Learnify was developed as a flashcard-based mobile application that enables students to create, manage, study, and share educational content. In Project 2, the application was further enhanced with Room Database, Firebase Firestore, Open Library API integration, and Camera Sensor functionality to provide a more interactive, accessible, and effective learning experience.</p>
                     
-                    <div class="project-meta">
-                        <p><strong>Problem Statement:</strong> Many students face difficulties in organizing study materials, revising important concepts effectively, and accessing learning resources in a structured manner. Traditional note-taking methods can be difficult to manage and often lack interactive features that support active learning. To address this issue and support SDG 4: Quality Education, Learnify was developed as a flashcard-based mobile application that enables students to create, manage, study, and share educational content. In Project 2, the application was further enhanced with Room Database, Firebase Firestore, Open Library API integration, and Camera Sensor functionality to provide a more interactive, accessible, and effective learning experience.</p>
+                    <div class="card-reflection" style="margin-bottom: 1.5rem;">
+                        <strong>Lessons Learned:</strong> Through the development of Learnify, I gained valuable experience in building a complete Android application using Jetpack Compose and modern mobile development technologies. I learned how to implement Room Database for local data persistence, integrate Firebase Firestore for cloud-based data sharing, connect to external APIs using Retrofit, and utilize the Camera Sensor for image capture. This project also improved my understanding of MVVM architecture, state management, navigation, and user interface design. Overall, the project strengthened both my technical skills and my awareness of how mobile technology can contribute to achieving SDG 4: Quality Education.
                     </div>
-
-                    <a href="[https://github.com/lxvnd4rr/a210658_drRimaniza_project2](https://github.com/lxvnd4rr/a210658_drRimaniza_project2)" target="_blank" class="btn-github">
-                        View on GitHub
-                    </a>
-
-                    <div class="reflection-block">
-                        <div class="reflection-title">Lessons Learned</div>
-                        <p class="reflection-text">Through the development of Learnify, I gained valuable experience in building a complete Android application using Jetpack Compose and modern mobile development technologies. I learned how to implement Room Database for local data persistence, integrate Firebase Firestore for cloud-based data sharing, connect to external APIs using Retrofit, and utilize the Camera Sensor for image capture. This project also improved my understanding of MVVM architecture, state management, navigation, and user interface design. Overall, the project strengthened both my technical skills and my awareness of how mobile technology can contribute to achieving SDG 4: Quality Education.</p>
+                    
+                    <div class="card-actions">
+                        <a href="[https://github.com/lxvnd4rr/a210658_drRimaniza_project2](https://github.com/lxvnd4rr/a210658_drRimaniza_project2)" target="_blank" class="btn-github">View on GitHub</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section id="reflection">
         <h2 class="section-title">Reflection & Learning Journey</h2>
-        <p class="section-subtitle">A review of my retrospective shifts, critical technical milestones, and overall growth path during development.</p>
-        
-        <div class="journey-card">
-            <div class="journey-text">
+        <div class="reflection-block">
+            <div class="reflection-text">
                 <p>Throughout Project 1, Project 2, and Labs 1 to 5, I went through a complete learning journey in building a modern Android application using Jetpack Compose. I started from basic UI design and gradually progressed into more advanced concepts such as user interaction, state management, navigation, ViewModel, and finally full data integration using Room, Firebase Firestore, and Retrofit API. Each stage helped me understand how a real mobile application is structured and how different components work together.</p>
                 <p>During this process, I faced several challenges, especially when dealing with state management, navigation flow between multiple screens, and integrating external systems like APIs and Firebase. Understanding how data moves between ViewModel, Repository, and UI layers was initially confusing, and debugging issues such as data not updating or not persisting properly required careful problem-solving. However, these challenges helped me improve my logical thinking and strengthened my understanding of Android architecture (MVVM).</p>
                 <p>This learning journey is strongly connected to SDG 4: Quality Education, as Learnify is designed to improve how students access, organize, and revise learning materials through a digital and interactive approach. By building this application, I learned how technology can support better education by making learning more structured, engaging, and accessible. It also made me realize the importance of creating user-friendly educational tools that can help students study more efficiently.</p>
@@ -790,48 +648,40 @@
 
     <section id="skills">
         <h2 class="section-title">Skills & Tech Stack</h2>
-        <p class="section-subtitle">Technologies, structural design standards, and structural abstractions handled across practical courses.</p>
-        
         <div class="skills-container">
-            <div class="skills-flex">
-                <span class="skill-tag">Kotlin</span>
-                <span class="skill-tag">Jetpack Compose</span>
-                <span class="skill-tag">Android Studio</span>
-                <span class="skill-tag">MVVM Architecture</span>
-                <span class="skill-tag">ViewModel</span>
-                <span class="skill-tag">StateFlow</span>
-                <span class="skill-tag">Navigation Component</span>
-                <span class="skill-tag">Room Database</span>
-                <span class="skill-tag">DAO</span>
-                <span class="skill-tag">Repository Pattern</span>
-                <span class="skill-tag">Firebase Firestore</span>
-                <span class="skill-tag">Retrofit API</span>
-                <span class="skill-tag">Open Library API</span>
-                <span class="skill-tag">CameraX / TakePicturePreview</span>
-                <span class="skill-tag">Material Design 3</span>
-                <span class="skill-tag">State Management in Compose</span>
-            </div>
+            <span class="skill-badge">Kotlin</span>
+            <span class="skill-badge">Jetpack Compose</span>
+            <span class="skill-badge">Android Studio</span>
+            <span class="skill-badge">MVVM Architecture</span>
+            <span class="skill-badge">ViewModel</span>
+            <span class="skill-badge">StateFlow</span>
+            <span class="skill-badge">Navigation Component</span>
+            <span class="skill-badge">Room Database</span>
+            <span class="skill-badge">DAO</span>
+            <span class="skill-badge">Repository Pattern</span>
+            <span class="skill-badge">Firebase Firestore</span>
+            <span class="skill-badge">Retrofit API</span>
+            <span class="skill-badge">Open Library API</span>
+            <span class="skill-badge">CameraX / TakePicturePreview</span>
+            <span class="skill-badge">Material Design 3</span>
+            <span class="skill-badge">State Management in Compose</span>
         </div>
     </section>
 
     <section id="resources">
-        <h2 class="section-title">Resources & Tools Used</h2>
-        <p class="section-subtitle">Technical components, libraries, and external asset environments leveraged throughout development.</p>
-        
-        <div class="resources-grid">
-            <div class="resources-box">
+        <h2 class="section-title">Resources & Documentation</h2>
+        <div class="resources-layout">
+            
+            <div class="resource-box">
                 <h3>APIs Used</h3>
-                <ul class="resources-list">
-                    <li>
-                        <strong>Open Library API</strong>
-                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 2px;">Used to retrieve live textbook and book information for the Explore Screen.</p>
-                    </li>
+                <ul>
+                    <li><strong>Open Library API</strong> – Used to retrieve live textbook and book information for the Explore Screen.</li>
                 </ul>
             </div>
 
-            <div class="resources-box">
-                <h3>Libraries & Technologies Used</h3>
-                <ul class="sub-list" style="padding-left: 0;">
+            <div class="resource-box">
+                <h3>Libraries & Technologies</h3>
+                <ul>
                     <li><strong>Jetpack Compose</strong> – Android UI toolkit for building modern user interfaces.</li>
                     <li><strong>Navigation Compose</strong> – Screen navigation and routing.</li>
                     <li><strong>ViewModel & StateFlow</strong> – State management and UI updates.</li>
@@ -844,30 +694,23 @@
                 </ul>
             </div>
 
-            <div class="resources-box">
-                <h3>Development Tools</h3>
-                <ul class="sub-list" style="padding-left: 0;">
-                    <li>Android Studio</li>
-                    <li>Kotlin Programming Language</li>
-                    <li>Firebase Console</li>
-                    <li>GitHub</li>
+            <div class="resource-box">
+                <h3>Development Stack & Acknowledgement</h3>
+                <ul>
+                    <li><strong>Tools:</strong> Android Studio, Kotlin Programming Language, Firebase Console, GitHub.</li>
+                    <li><strong>AI Assistance Acknowledgement:</strong> This project was developed by the student, with the assistance of AI tools such as ChatGPT for idea generation, code explanation, debugging support, documentation writing, and report preparation. All code was reviewed, tested, modified, and integrated by the student to ensure understanding and compliance with the project requirements.</li>
                 </ul>
             </div>
 
-            <div class="ai-box">
-                <h4>AI Assistance Acknowledgement</h4>
-                <p>This project was developed by the student, with the assistance of AI tools such as ChatGPT for idea generation, code explanation, debugging support, documentation writing, and report preparation. All code was reviewed, tested, modified, and integrated by the student to ensure understanding and compliance with the project requirements.</p>
-            </div>
         </div>
     </section>
 
 </main>
 
 <footer>
-    <div class="container">
-        <p>NURIN ZAFIRAH BINTI MOHD NAZRI</p>
-        <div class="meta-info">Matric: A210658 | Programme: IT | 2026 e-Portfolio</div>
-    </div>
+    <p>NURIN ZAFIRAH BINTI MOHD NAZRI</p>
+    <p class="meta-info">Matric No: A210658 | 2026</p>
 </footer>
 
-```
+</body>
+</html>
