@@ -1116,32 +1116,10 @@
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="nav-logo">NurinZafirah.Portfolio</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#labs">Labs</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#reflection">Reflection</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                </ul>
-            </nav>
-        section {
-            padding: 60px 0;
-        }
-    }
-</style>
-
-```
-
-```
 <header>
     <div class="container">
         <nav>
-            <div class="nav-logo">NZ . Portfolio</div>
+            <div class="nav-logo">Nurin Zafirah . Portfolio</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#labs">Labs</a></li>
@@ -1154,108 +1132,91 @@
     </div>
 </header>
 
-<div class="profile-hero">
-    <div class="container">
-        <div class="profile-card">
-            <div class="profile-avatar">NZ</div>
-            <h1>NURIN ZAFIRAH BINTI MOHD NAZRI</h1>
-            <div class="programme-tag">Information Technology</div>
-            
-            <div class="meta-grid">
-                <div class="meta-item">
-                    <span class="meta-label">Matric No.</span>
-                    <span class="meta-value">A210658</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Instructor</span>
-                    <span class="meta-value">Dr. Rimaniza Binti Zainal Abidin</span>
-                </div>
-            </div>
-        </div>
-    </header>
-    </div>
-</div>
-
 <main class="container">
-
     <section id="home">
-        <div class="container">
-    <div class="hero-grid">
-        <div>
-            <span class="hero-badge" style="display: inline-block; margin-bottom: 1.5rem;">Student e-Portfolio</span>
+        <!-- BAHAGIAN HERO: Maklumat Pelajar & Aplikasi -->
+        <div class="hero-section" style="margin-bottom: 3rem;">
+            <div class="hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: start;">
+                
+                <!-- Kiri: Maklumat Pelajar -->
+                <div class="student-info">
+                    <span class="hero-badge" style="display: inline-block; background: var(--badge-bg, #e0f2fe); color: var(--badge-color, #0369a1); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem;">
+                        Student Information
+                    </span>
 
-            <div class="hero-meta" style="margin-bottom: 2rem;">
-                <div class="meta-item">
-                    <span>Name</span>
-                    <p>Nurin Zafirah Binti Mohd Nazri</p>
-                </div>
-                <div class="meta-item">
-                    <span>Matric Number</span>
-                    <p>A210658</p>
-                </div>
-                <div class="meta-item">
-                    <span>Programme</span>
-                    <p>Information Technology</p>
-                </div>
-                <div class="meta-item">
-                    <span>Instructor</span>
-                    <p>Dr. Rimaniza Binti Zainal Abidin</p>
-                </div>
-            </div>
-
-            <hr style="border: 0; border-top: 1px solid var(--border-color, #eee); margin-bottom: 2rem;">
-
-            <h1 class="hero-title" style="margin-top: 0;">Learnify</h1>
-            <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.15rem;">
-                Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. The application allows users to create, organize, study, and share flashcard sets for various subjects, making revision more structured and engaging. Learnify also supports user authentication, cloud-based data synchronization, and local data storage to ensure a seamless learning experience. By providing an accessible and interactive platform for self-directed learning, Learnify aims to improve students' study habits and academic performance.
-            </p>
-        </div>
-    </div>
-</div>
-                <div>
-                    <div class="sdg-box">
-                        <div class="sdg-header">
-                            <div class="sdg-number">4</div>
-                            <h3>SDG 4: Quality Education</h3>
+                    <div class="hero-meta" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="meta-item">
+                            <span style="font-size: 0.85rem; color: var(--text-muted, #666); text-transform: uppercase; letter-spacing: 0.5px;">Name</span>
+                            <p style="margin: 0.2rem 0 0; font-weight: 600;">Nurin Zafirah Binti Mohd Nazri</p>
                         </div>
-                        <p style="font-size: 0.95rem; color: var(--text-muted);">
-                            Learnify is aligned with United Nations Sustainable Development Goal (SDG) 4: Quality Education, which aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. The application supports this goal by:
-                        </p>
-                        <ul>
-                            <li>Providing students with easy access to educational resources anytime and anywhere.</li>
-                            <li>Encouraging active learning through flashcard-based revision techniques.</li>
-                            <li>Helping learners improve knowledge retention and study efficiency.</li>
-                            <li>Supporting self-paced and continuous learning beyond the classroom.</li>
-                            <li>Enabling the sharing of learning materials among students, fostering collaborative learning.</li>
-                        </ul>
-                        <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 1rem;">
-                            Through these features, Learnify contributes to enhancing the quality of education by making learning more accessible, organized, and effective for students.
-                        </p>
+                        <div class="meta-item">
+                            <span style="font-size: 0.85rem; color: var(--text-muted, #666); text-transform: uppercase; letter-spacing: 0.5px;">Matric Number</span>
+                            <p style="margin: 0.2rem 0 0; font-weight: 600;">A210658</p>
+                        </div>
+                        <div class="meta-item">
+                            <span style="font-size: 0.85rem; color: var(--text-muted, #666); text-transform: uppercase; letter-spacing: 0.5px;">Programme</span>
+                            <p style="margin: 0.2rem 0 0; font-weight: 600;">Information Technology</p>
+                        </div>
+                        <div class="meta-item">
+                            <span style="font-size: 0.85rem; color: var(--text-muted, #666); text-transform: uppercase; letter-spacing: 0.5px;">Instructor</span>
+                            <p style="margin: 0.2rem 0 0; font-weight: 600;">Dr. Rimaniza Binti Zainal Abidin</p>
+                        </div>
                     </div>
                 </div>
-        <h2 class="section-title">Welcome to My e-Portfolio</h2>
-        <p class="section-subtitle">An elegant display of mobile development milestones, interactive design explorations, and sustainable education alignment.</p>
-        
-        <div class="home-grid">
-            <div class="intro-box">
-                <p>Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. The application allows users to create, organize, study, and share flashcard sets for various subjects, making revision more structured and engaging. Learnify also supports user authentication, cloud-based data synchronization, and local data storage to ensure a seamless learning experience. By providing an accessible and interactive platform for self-directed learning, Learnify aims to improve students' study habits and academic performance.</p>
+
+                <!-- Kanan: Pengenalan Projek -->
+                <div class="project-intro">
+                    <h1 class="hero-title" style="margin: 0 0 0.5rem 0; font-size: 2.5rem; color: var(--title-color, #111);">Learnify</h1>
+                    <p style="margin: 0; color: var(--text-muted, #555); font-size: 1.05rem; line-height: 1.6;">
+                        Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. The application allows users to create, organize, study, and share flashcard sets for various subjects, making revision more structured and engaging.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border-color, #eee); margin: 3rem 0;">
+
+        <!-- BAHAGIAN UTAMA: Welcome & SDG Alignment -->
+        <div class="content-section">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome to My e-Portfolio</h2>
+                <p class="section-subtitle" style="color: var(--text-muted, #666); max-width: 700px; margin: 0 auto;">
+                    An elegant display of mobile development milestones, interactive design explorations, and sustainable education alignment.
+                </p>
             </div>
             
-            <div class="sdg-box">
-                <div class="sdg-badge">SDG 4</div>
-                <h3>Quality Education</h3>
-                <p>Learnify is cleanly aligned with United Nations Sustainable Development Goal (SDG) 4: Quality Education, which aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. The application supports this goal by:</p>
-                <ul class="sdg-list">
-                    <li>Providing students with easy access to educational resources anytime and anywhere.</li>
-                    <li>Encouraging active learning through flashcard-based revision techniques.</li>
-                    <li>Helping learners improve knowledge retention and study efficiency.</li>
-                    <li>Supporting self-paced and continuous learning beyond the classroom.</li>
-                    <li>Enabling the sharing of learning materials among students, fostering collaborative learning.</li>
-                </ul>
+            <div class="home-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: stretch;">
+                <!-- Kotak Detail Aplikasi -->
+                <div class="intro-box" style="background: var(--card-bg, #f9f9f9); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color, #eee); display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="margin-top: 0; margin-bottom: 1rem; color: var(--primary-color, #000);">Advanced Features</h3>
+                    <p style="margin: 0; line-height: 1.6; color: var(--text-color, #333);">
+                        Learnify supports user authentication, cloud-based data synchronization, and local data storage to ensure a seamless learning experience. By providing an accessible and interactive platform for self-directed learning, Learnify aims to improve students' study habits and academic performance.
+                    </p>
+                </div>
+                
+                <!-- Kotak SDG 4 -->
+                <div class="sdg-box" style="background: var(--sdg-bg, #edf7ed); padding: 2rem; border-radius: 12px; border: 1px solid var(--sdg-border, #c3e6cb); position: relative;">
+                    <div class="sdg-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="sdg-badge" style="background: #4caf50; color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-weight: bold; font-size: 0.9rem;">SDG 4</div>
+                        <h3 style="margin: 0; color: #1e4620;">Quality Education</h3>
+                    </div>
+                    <p style="margin-bottom: 1rem; line-height: 1.5; font-size: 0.95rem; color: #1e4620;">
+                        Learnify is cleanly aligned with United Nations Sustainable Development Goal (SDG) 4: Quality Education. The application supports this goal by:
+                    </p>
+                    <ul class="sdg-list" style="margin: 0; padding-left: 1.2rem; line-height: 1.6; font-size: 0.95rem; color: #2e6930;">
+                        <li>Providing students with easy access to educational resources anytime and anywhere.</li>
+                        <li>Encouraging active learning through flashcard-based revision techniques.</li>
+                        <li>Helping learners improve knowledge retention and study efficiency.</li>
+                        <li>Supporting self-paced and continuous learning beyond the classroom.</li>
+                        <li>Enabling the sharing of learning materials among students, fostering collaborative learning.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-
+</main>
+    
     <section id="labs">
         <div class="container">
             <h2 class="section-title">Laboratory Sessions</h2>
@@ -1421,14 +1382,14 @@
                     <iframe src="[https://www.youtube.com/embed/t_tWFHGeUf8](https://www.youtube.com/embed/t_tWFHGeUf8)" title="Project 1 Video Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-body">
-                    <span class="card-tag">Project Phase 1</span>
+                    <span class="card-tag">Project 1</span>
                     <h3>Learnify (Architecture & Core Features)</h3>
                     
                     <div class="project-meta">
                         <p><strong>Problem Statement:</strong> Students often face difficulties in managing their study materials effectively. Notes are scattered across different platforms, making it hard to organize and review information efficiently. In addition, many students rely on traditional revision methods that are less engaging and do not support active recall, resulting in lower knowledge retention. Furthermore, students may struggle to access structured learning resources that can help them revise consistently and track their learning progress. These challenges can negatively affect learning effectiveness and academic performance.</p>
                     </div>
                     <div class="card-body">
-                        <span class="card-tag">Project 1 (Lab 4 + Working Features)</span>
+                        <span class="card-tag">Project 1</span>
                         <h3 class="card-title">Learnify Core Application</h3>
                         <p class="card-desc"><strong>Problem Statement:</strong> Students often face difficulties in managing their study materials effectively. Notes are scattered across different platforms, making it hard to organize and review information efficiently. In addition, many students rely on traditional revision methods that are less engaging and do not support active recall, resulting in lower knowledge retention. Furthermore, students may struggle to access structured learning resources that can help them revise consistently and track their learning progress. These challenges can negatively affect learning effectiveness and academic performance.</p>
                         
@@ -1460,14 +1421,14 @@
                     <iframe src="[https://www.youtube.com/embed/OhRSM3fLiZM](https://www.youtube.com/embed/OhRSM3fLiZM)" title="Project 2 Video Presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="card-body">
-                    <span class="card-tag">Project Phase 2</span>
+                    <span class="card-tag">Project 2</span>
                     <h3>Learnify (Cloud, APIs & Sensors Integration)</h3>
                     
                     <div class="project-meta">
                         <p><strong>Problem Statement:</strong> Many students face difficulties in organizing study materials, revising important concepts effectively, and accessing learning resources in a structured manner. Traditional note-taking methods can be difficult to manage and often lack interactive features that support active learning. To address this issue and support SDG 4: Quality Education, Learnify was developed as a flashcard-based mobile application that enables students to create, manage, study, and share educational content. In Project 2, the application was further enhanced with Room Database, Firebase Firestore, Open Library API integration, and Camera Sensor functionality to provide a more interactive, accessible, and effective learning experience.</p>
                     </div>
                     <div class="card-body">
-                        <span class="card-tag">Project 2 (Full Stack Integrated Ecosystem)</span>
+                        <span class="card-tag">Project 2</span>
                         <h3 class="card-title">Learnify Advanced Ecosystem</h3>
                         <p class="card-desc"><strong>Problem Statement:</strong> Many students face difficulties in organizing study materials, revising important concepts effectively, and accessing learning resources in a structured manner. Traditional note-taking methods can be difficult to manage and often lack interactive features that support active learning. To address this issue and support SDG 4: Quality Education, Learnify was developed as a flashcard-based mobile application that enables students to create, manage, study, and share educational content. In Project 2, the application was further enhanced with Room Database, Firebase Firestore, Open Library API integration, and Camera Sensor functionality to provide a more interactive, accessible, and effective learning experience.</p>
                         
