@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nurin Zafirah E-Portfolio</title>
+
+<style>
+:root{
+  --bg:#f6f1e7;
+  --card:#ffffff;
+  --primary:#8b6b4f;
+  --secondary:#c7a27c;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid #e5d7c6;
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.nav-logo{
+  font-weight:bold;
+  color:var(--primary);
+}
+
+.nav-links a{
+  margin:0 10px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  color:var(--primary);
+  margin-bottom:20px;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:32px;
+  color:var(--primary);
+}
+
+.hero p{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.video iframe{
+  width:100%;
+  height:300px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.reflection{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:var(--primary);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.btn:hover{
+  background:var(--secondary);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#fff;
+  border-top:1px solid #e5d7c6;
+  color:var(--muted);
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-logo">Learnify e-Portfolio</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#labs">Labs</a>
+      <a href="#projects">Projects</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#skills">Skills</a>
+      <a href="#resources">Resources</a>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <h1>NURIN ZAFIRAH BINTI MOHD NAZRI</h1>
+  <p>Matric No: A210658 | Programme: INFORMATION TECHNOLOGY</p>
+  <p>Instructor: DR. RIMANIZA BINTI ZAINAL ABIDIN</p>
+  <p style="max-width:800px;margin:20px auto;">
+    Learnify is a mobile learning application developed to help students manage their learning materials more effectively through digital flashcards. It enables creation, organization, study, and sharing of flashcards to support structured and engaging revision. The system also supports authentication, cloud sync, and local storage for seamless learning.
+  </p>
+</header>
+
+<section>
+  <h2>SDG 4: Quality Education</h2>
+  <p>
+    Learnify aligns with SDG 4 by improving access to educational resources, encouraging active learning through flashcards, supporting self-paced study, and enabling collaborative sharing among students.
+  </p>
+</section>
+
+<section id="labs">
+  <h2>Labs</h2>
+  <div class="grid">
+
+```
+<div class="card">
+  <h3>Lab 1 - UI Design</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/ZFo-xeYRXy4" allowfullscreen></iframe>
+  </div>
+  <p class="reflection">
+    Understanding Jetpack Compose layout structures like Column, Row, and Box helped me build UI more effectively. It strengthened my foundation in screen design and structure.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Lab 2 - Interaction</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/bmdDFV5CvEc" allowfullscreen></iframe>
+  </div>
+  <p class="reflection">
+    I learned how state management works using remember and mutableStateOf. This improved my understanding of reactive UI and recomposition.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Lab 3 - Material Design</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/Vwz6M_BbEUg" allowfullscreen></iframe>
+  </div>
+  <p class="reflection">
+    This lab improved my understanding of Material Design principles, including themes, typography, and animations for better UI experience.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Lab 4 - Navigation</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/t_tWFHGeUf8" allowfullscreen></iframe>
+  </div>
+  <p class="reflection">
+    I learned navigation between screens and how ViewModel maintains consistent data across pages in a structured app flow.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Lab 5 - Room Database</h3>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/X50wHpeEgKc" allowfullscreen></iframe>
+  </div>
+  <p class="reflection">
+    This lab helped me understand persistent data storage using Room and MVVM architecture for real-world application structure.
+  </p>
+</div>
+```
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Project 1 - Learnify App</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/t_tWFHGeUf8" allowfullscreen></iframe>
+    </div>
+    <p>
+      Problem: Students struggle to organize scattered study materials and lack effective revision tools.
+    </p>
+    <p class="reflection">
+      I learned how to design user-focused applications and integrate basic Android components. This project improved my understanding of UI design and data handling.
+    </p>
+    <a class="btn" href="https://github.com/lxvnd4rr/A210658_NurinZafirah_DrRimaniza_Project1" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
+    <h3>Project 2 - Learnify Enhanced System</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/OhRSM3fLiZM" allowfullscreen></iframe>
+    </div>
+    <p>
+      Enhanced with Room Database, Firebase Firestore, Open Library API, and Camera integration for interactive learning.
+    </p>
+    <p class="reflection">
+      This project strengthened my understanding of MVVM, API integration, and cloud storage systems in real mobile applications.
+    </p>
+    <a class="btn" href="https://github.com/lxvnd4rr/a210658_drRimaniza_project2" target="_blank">View on GitHub</a>
+  </div>
+
+</section>
+
+<section id="reflection">
+  <h2>Reflection & Learning Journey</h2>
+  <p>
+    Throughout the labs and projects, I progressed from basic UI design to advanced mobile development concepts such as state management, navigation, MVVM architecture, and cloud integration. I faced challenges in understanding data flow and API integration, but continuous practice helped me improve my problem-solving skills. This journey strengthened my technical ability and showed how technology can support SDG 4: Quality Education by making learning more accessible and structured.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills & Tech Stack</h2>
+  <p>
+    Kotlin, Jetpack Compose, Android Studio, MVVM Architecture, ViewModel, StateFlow, Navigation Component, Room Database, DAO, Repository Pattern, Firebase Firestore, Retrofit API, Open Library API, CameraX, Material Design 3, State Management in Compose
+  </p>
+</section>
+
+<section id="resources">
+  <h2>Resources</h2>
+  <div class="card">
+    <p><b>Open Library API</b> - Used for retrieving book information.</p>
+    <p><b>Tools:</b> Android Studio, Firebase Console, GitHub</p>
+    <p><b>Libraries:</b> Jetpack Compose, Retrofit, Coil, Room, Firebase Firestore</p>
+    <p><b>Acknowledgement:</b> AI tools were used for learning support, documentation, and debugging guidance while all final implementations were verified by the student.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 | NURIN ZAFIRAH BINTI MOHD NAZRI | A210658</p>
+</footer>
+
+</body>
+</html>
